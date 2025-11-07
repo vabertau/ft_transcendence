@@ -9,8 +9,6 @@ services:
       context: ./proxy
       dockerfile: Dockerfile
     container_name: proxy
-    depends_on:
-      - service-users
     environment:
       - SSL_CERT=/etc/nginx/ssl/server.crt
       - SSL_CERT_KEY=/etc/nginx/ssl/server.key
@@ -87,6 +85,7 @@ services:
       # - hashicorp_vault
       - redis
       - postgreSQL
+
     ports:
       - "4000:4000"
     environment:
@@ -150,6 +149,7 @@ services:
       # - hashicorp_vault
       - postgreSQL
       - redis
+      - proxy
     ports:
       - "4001:4001"
     environment:

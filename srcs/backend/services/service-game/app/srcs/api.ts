@@ -6,7 +6,7 @@
 /*   By: vabertau <vabertau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 15:58:35 by tissad            #+#    #+#             */
-/*   Updated: 2025/11/07 16:16:08 by vabertau         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:41:28 by vabertau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ import fastifyCookie from '@fastify/cookie';
 import redisPlugin from './plugins/redis.plugin';
 import { prismaPlugin } from './plugins/prisma.plugin';
 
-
+// import route
+import {testGameRoutes} from './routes/test.route'
 
 
 /* ************************************************************************** */
@@ -40,7 +41,7 @@ app.register(prismaPlugin);
 
 
 // Register routes
-
+app.register(testGameRoutes);
 
 
 // Start the Fastify server
