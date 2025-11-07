@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   api.ts                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vabertau <vabertau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 15:58:35 by tissad            #+#    #+#             */
-/*   Updated: 2025/11/03 11:17:38 by tissad           ###   ########.fr       */
+/*   Updated: 2025/11/07 16:16:08 by vabertau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ const start = async () => {
       console.log('Headers de la requête :', req.headers);
     });
     
-    await app.listen({ port: 4000, host: '0.0.0.0' });
+    await app.listen({ port: 4001, host: '0.0.0.0' });
     console.log('🚀 Server is running');
 
   } catch (err) {
